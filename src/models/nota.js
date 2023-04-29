@@ -14,8 +14,19 @@ class Nota {
         );
     }
 
-    mediaCA() {
-        return "SS";
+    calcularMediaCA() {
+        const media = (parseFloat(this.calcularMediaFinal()));
+        if (media >= 9) {
+            return "SS";
+        } else if (media >= 7.5 && media < 9) {
+            return "MS";
+        } else if (media >= 6 && media < 7.5) {
+            return "MM";
+        } else if (media >= 4 && media < 6) {
+            return "MI";
+        } else {
+            return "II"
+        }
     }
 }
 
